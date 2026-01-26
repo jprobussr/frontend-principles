@@ -107,3 +107,13 @@ img {
     color: var(--on-panel);
   }
 }
+
+#theme-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
