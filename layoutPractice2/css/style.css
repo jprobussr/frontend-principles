@@ -1,8 +1,17 @@
-:root{
-  --dark: #312614;
-  --gold: #B7832F;
-  --gray: #707070;
-  --white: #fff;
+:root {
+  --bg: #fff;
+  --text: #312614;
+  --muted: #707070;
+  --panel: #312614;
+  --accent: #b7832f;
+  --on-panel: #fff;
+}
+
+body.theme-dark {
+  --bg: #111;
+  --text: #f5f5f5;
+  --muted: #d1d5db;
+  --panel: #000;
 }
 
 *,
@@ -15,9 +24,33 @@ body {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.5;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: var(--gray);
-  background-color: var(--white);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  color: var(--muted);
+  background-color: var(--bg);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+span {
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 .container {
@@ -29,4 +62,48 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+.columns {
+  margin: 2rem 0;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .columns {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .columns .col {
+    flex: 1;
+  }
+
+  /* .columns .col:nth-child(2) {
+    flex: 2;
+  } */
+
+  .columns:first-of-type .col:nth-child(2) {
+    flex: 2;
+  }
+
+  .columns .col:last-child {
+    background-color: var(--panel);
+    color: var(--on-panel);
+    padding: 1.25rem;
+  }
+
+  .columns .col:last-child {
+    flex: 0 0 220px;
+    color: var(--on-panel);
+  }
 }
