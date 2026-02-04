@@ -25,15 +25,38 @@ img {
   display: block;
 }
 
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.site-header__nav {
+  display: none;
+}
+
+.site-header__nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.site-header__menu {
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 .container {
   max-width: 60rem;
   margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 .hero {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 2rem 1.25rem;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -68,7 +91,7 @@ img {
 
 .recent-posts {
   background-color: #edf7fa;
-  padding: 2rem 1.25rem;
+  padding: 2rem 0;
 }
 
 .recent-posts h2 {
@@ -102,7 +125,7 @@ img {
 }
 
 .featured-works {
-  padding: 2rem 1.25rem;
+  padding: 2rem 0;
 }
 
 .featured-works h2 {
@@ -168,12 +191,30 @@ img {
 }
 
 @media (min-width: 768px) {
-  .hero {
+  .hero .container {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     gap: 2.5rem;
     text-align: left;
+  }
+
+  .site-header {
+    padding: 1.25rem 0;
+  }
+
+  .site-header__nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .site-header__menu {
+    display: none;
+  }
+
+  .hero .container > div {
+    flex: 1;
   }
 
   .hero__image {
@@ -181,6 +222,10 @@ img {
     height: 12rem;
     margin: 0;
     flex-shrink: 0;
+  }
+
+  .hero__content {
+    max-width: 32rem;
   }
 
   .hero > div {
