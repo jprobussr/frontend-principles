@@ -25,6 +25,11 @@ img {
   display: block;
 }
 
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 .hero {
   max-width: 40rem;
   margin: 0 auto;
@@ -162,19 +167,51 @@ img {
   font-weight: 400;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .hero {
-    text-align: left;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 2.5rem;
+    text-align: left;
   }
 
   .hero__image {
-    margin: 0;
     width: 12rem;
     height: 12rem;
-    flex: 0 0 auto;
+    margin: 0;
+    flex-shrink: 0;
   }
-} */
+
+  .hero > div {
+    flex: 1;
+  }
+
+  .posts-grid {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .posts-grid article {
+    flex: 1;
+  }
+
+  .recent-posts article + article {
+    margin-top: 0;
+  }
+
+  .work {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .work img {
+    width: 15rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .work > div {
+    margin-top: 0;
+  }
+}
