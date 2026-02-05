@@ -35,10 +35,20 @@ img {
   display: none;
 }
 
+.site-header.is-open .site-header__nav {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* .site-header.is-open .site-header__menu {
+  display: none;
+} */
+
 .site-header__nav a {
   text-decoration: none;
   color: var(--color-text);
   font-weight: 600;
+  margin-left: 1rem;
 }
 
 .site-header__menu {
