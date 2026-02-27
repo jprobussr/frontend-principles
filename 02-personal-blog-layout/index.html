@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="site-header">
@@ -23,27 +23,47 @@
     </header>
 
     <main class="page">
-        <div class="container layout">
+      <div class="container layout">
+        <article class="post">
+          <div class="post__image"></div>
+          <div class="post__body">
+            <p class="post__meta">February 27, 2026</p>
+            <h1 class="post__title">
+              Building a Simple Life Through Front-End Skills
+            </h1>
+            <p class="post__text">
+              I'm learning HTML, CSS, JavaScript, and React step by step -
+              building projects that are clean, responsive, and recruiter-ready.
+            </p>
+            <a href="#" class="post__link">Continue reading</a>
+          </div>
+        </article>
 
-            <article class="post">
-                <div class="post__image"></div>
-                <div class="post__body"></div>
-            </article>
-
-            <aside class="sidebar">
-                <section class="widget"></section>
-                <section class="widget"></section>
-            </aside>
-
-        </div>
+        <aside class="sidebar">
+          <section class="widget">
+            <h2 class="widget__title">About me</h2>
+            <p class="widget__text">
+              I'm John — learning front-end development step by step and
+              building projects that prove real skills.
+            </p>
+          </section>
+          <section class="widget">
+            <h2 class="widget__title">Recent posts</h2>
+            <ul class="widget__list">
+              <li><a href="#">Learning Flexbox the Right Way</a></li>
+              <li><a href="#">My Mobile-First Workflow</a></li>
+              <li><a href="#">Building Projects for Recruiters</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>John Probus Sr</p>
-            <small>Copyright &copy;</small>
-        </div>
+      <div class="container footer-inner">
+        <p>John Probus Sr</p>
+        <small>Copyright &copy;</small>
+      </div>
     </footer>
-
   </body>
 </html>
