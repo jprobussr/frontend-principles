@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <div class="container">
+        <h1>Character Counter</h1>
+
+        <button id="themeToggle" aria-label="Toggle theme" aria-pressed="false">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="counter-card">
+          <h2>Write your message</h2>
+          <p>Type in the box below to track your character count.</p>
+
+          <label for="messageInput">Message</label>
+          <textarea
+            id="messageInput"
+            rows="8"
+            placeholder="Start typing here..."
+          ></textarea>
+          <p id="countText">0 / 200 characters</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Built by John Sr</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
