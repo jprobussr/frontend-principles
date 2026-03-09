@@ -10,6 +10,15 @@
   --container: 48rem;
 }
 
+body.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #0284c7;
+  --border: rgba(15, 23, 42, 0.12);
+}
+
 *,
 *::before,
 **::after {
