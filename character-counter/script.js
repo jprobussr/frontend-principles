@@ -23,6 +23,13 @@ if (savedTheme === 'light') {
 
 updateThemeButton();
 
+const updateCharacterCount = () => {
+  const currentLength = messageInput.value.length;
+  countText.textContent = `${currentLength} / 200 characters`;
+}
+
+updateCharacterCount();
+
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('light');
 
@@ -37,6 +44,4 @@ themeToggle.addEventListener('click', () => {
   updateThemeButton();
 });
 
-messageInput.addEventListener('input', () => {
-  console.log(messageInput.value.length);
-});
+messageInput.addEventListener('input', updateCharacterCount);
