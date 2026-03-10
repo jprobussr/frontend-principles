@@ -3,6 +3,8 @@ const body = document.body;
 const messageInput = document.getElementById('messageInput');
 const countText = document.getElementById('countText');
 
+const MAX_CHARACTERS = 200;
+
 const updateThemeButton = () => {
   const isLight = body.classList.contains('light');
 
@@ -25,7 +27,7 @@ updateThemeButton();
 
 const updateCharacterCount = () => {
   const currentLength = messageInput.value.length;
-  countText.textContent = `${currentLength} / 200 characters`;
+  countText.textContent = `${currentLength} / ${MAX_CHARACTERS} characters`;
 }
 
 updateCharacterCount();
