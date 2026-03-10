@@ -1,5 +1,7 @@
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const messageInput = document.getElementById('messageInput');
+const countText = document.getElementById('countText');
 
 const updateThemeButton = () => {
   const isLight = body.classList.contains('light');
@@ -33,4 +35,8 @@ themeToggle.addEventListener('click', () => {
   }
 
   updateThemeButton();
+});
+
+messageInput.addEventListener('input', () => {
+  console.log(messageInput.value.length);
 });
